@@ -1,3 +1,5 @@
+// Solution to https://www.hackerrank.com/challenges/30-review-loop.
+
 package main
 
 import (
