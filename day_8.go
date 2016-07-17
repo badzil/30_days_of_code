@@ -2,12 +2,14 @@
 
 package main
 
-import "fmt"
-import "bufio"
-import "os"
-import "strconv"
-import "strings"
-import "log"
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+	"strings"
+)
 
 func safeAtoi(str string) int {
 	integer, err := strconv.Atoi(strings.TrimSpace(str))

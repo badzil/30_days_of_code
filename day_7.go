@@ -2,11 +2,13 @@
 
 package main
 
-import "bufio"
-import "fmt"
-import "os"
-import "strconv"
-import "strings"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
 
 func reverseNumbers(numbers []int) []int {
 	// WTF is wrong with Go??

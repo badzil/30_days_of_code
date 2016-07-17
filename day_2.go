@@ -2,9 +2,9 @@
 package main
 
 import (
-    "fmt"
-    "math"
-)    
+	"fmt"
+	"math"
+)
 
 // Go doesn't know how to round numbers out of the box. Uh.
 // Copied from https://github.com/golang/go/issues/4594#issuecomment-135336012.

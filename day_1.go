@@ -34,6 +34,6 @@ func main() {
 	second_int, second_double, second_string = get_input()
 
 	fmt.Println(first_int + second_int)
-	fmt.Printf("%.1f\n", first_double + second_double)
+	fmt.Printf("%.1f\n", first_double+second_double)
 	fmt.Println(first_string + second_string)
 }
