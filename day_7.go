@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func reverseNumbers(numbers []int) []int {
+func ReverseNumbers(numbers []int) []int {
 	// WTF is wrong with Go??
 	reversedNumbers := make([]int, len(numbers))
 	for i := range numbers {
@@ -19,7 +19,7 @@ func reverseNumbers(numbers []int) []int {
 	return reversedNumbers
 }
 
-func printlnNumbers(numbers []int) {
+func PrintlnNumbers(numbers []int) {
 	for index, number := range numbers {
 		if index != 0 {
 			fmt.Print(" ")
@@ -41,5 +41,5 @@ func main() {
 		numbers[i] = number
 	}
 
-	printlnNumbers(reverseNumbers(numbers))
+	PrintlnNumbers(ReverseNumbers(numbers))
 }

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func get_input() (int, float64, string) {
+func GetInput() (int, float64, string) {
 	reader := bufio.NewReader(os.Stdin)
 	first_input, _ := reader.ReadString('\n')
 	second_input, _ := reader.ReadString('\n')
@@ -31,7 +31,7 @@ func main() {
 	first_double = 4.0
 	first_string = "HackerRank "
 
-	second_int, second_double, second_string = get_input()
+	second_int, second_double, second_string = GetInput()
 
 	fmt.Println(first_int + second_int)
 	fmt.Printf("%.1f\n", first_double+second_double)

@@ -8,7 +8,7 @@ import (
 
 // Go doesn't know how to round numbers out of the box. Uh.
 // Copied from https://github.com/golang/go/issues/4594#issuecomment-135336012.
-func round(f float64) int {
+func Round(f float64) int {
 	if math.Abs(f) < 0.5 {
 		return 0
 	}
@@ -21,5 +21,5 @@ func main() {
 	tax := price * taxPercent / 100
 	tip := price * tipPercent / 100
 	price += tax + tip
-	fmt.Printf("The total meal cost is %v dollars.", round(price))
+	fmt.Printf("The total meal cost is %v dollars.", Round(price))
 }

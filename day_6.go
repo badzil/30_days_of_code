@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func safeAtoi(str string) int {
+func SafeAtoi(str string) int {
 	integer, err := strconv.Atoi(strings.TrimSpace(str))
 	if err != nil {
 		log.Fatal(err)
@@ -20,12 +20,12 @@ func safeAtoi(str string) int {
 	return integer
 }
 
-func getProblemSize(buffer *bufio.Reader) int {
+func GetProblemSize(buffer *bufio.Reader) int {
 	problem_size_str, _ := buffer.ReadString('\n')
-	return safeAtoi(problem_size_str)
+	return SafeAtoi(problem_size_str)
 }
 
-func printOddAndEvenCharacters(word string) {
+func PrintOddAndEvenCharacters(word string) {
 	oddChars, evenChars := "", ""
 	for index, character := range word {
 		if (index+1)%2 == 1 {
@@ -39,10 +39,10 @@ func printOddAndEvenCharacters(word string) {
 
 func main() {
 	buffer := bufio.NewReader(os.Stdin)
-	problem_size := getProblemSize(buffer)
+	problem_size := GetProblemSize(buffer)
 	for i := 0; i < problem_size; i++ {
 		newline, _ := buffer.ReadString('\n')
 		word := strings.TrimSpace(newline)
-		printOddAndEvenCharacters(word)
+		PrintOddAndEvenCharacters(word)
 	}
 }
