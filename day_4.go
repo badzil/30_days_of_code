@@ -44,7 +44,8 @@ func main() {
 		p = p.NewPerson(age)
 		p.AmIOld()
 		for j := 0; j < 3; j++ {
-			p = p.YearPasses() }
+			p = p.YearPasses()
+		}
 		p.AmIOld()
 		fmt.Println()
 	}
