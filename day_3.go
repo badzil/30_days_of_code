@@ -1,17 +1,15 @@
-// Solution to day 3.
+// Solution to https://www.hackerrank.com/challenges/30-conditional-statements.
+
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
-func IsWeird(number float64) bool {
-	return (6 <= number && number <= 20) || math.Mod(number, 2) == 1
+func IsWeird(number int) bool {
+	return (6 <= number && number <= 20) || number%2 == 1
 }
 
 func main() {
-	var number float64
+	var number int
 	fmt.Scanf("%v", &number)
 	if IsWeird(number) {
 		fmt.Println("Weird")
