@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 // Stack
@@ -64,25 +65,34 @@ func IsPalindrome(input string) bool {
 	return true
 }
 
+// Tests
+
+func AssertEqual(left interface{}, right interface{}) {
+	if left != right {
+		fmt.Println("%v != %v", left, right)
+		os.Exit(1)
+	}
+}
+
 func TestStack() {
 	s := NewStack()
 	s.PushCharacter('a')
 	s.PushCharacter('b')
-	fmt.Println(string(s.PopCharacter()))
-	fmt.Println(string(s.PopCharacter()))
+	AssertEqual(s.PopCharacter(), 'b')
+	AssertEqual(s.PopCharacter(), 'a')
 }
 
 func TestQueue() {
 	q := NewQueue()
 	q.EnqueueCharacter('a')
 	q.EnqueueCharacter('b')
-	fmt.Println(string(q.DequeueCharacter()))
-	fmt.Println(string(q.DequeueCharacter()))
+	AssertEqual(q.DequeueCharacter(), 'a')
+	AssertEqual(q.DequeueCharacter(), 'b')
 }
 
 func main() {
-	// TestStack()
-	// TestQueue()
+	TestStack()
+	TestQueue()
 
 	for _, input := range []string{"racecar", "susan"} {
 		var modifier string
