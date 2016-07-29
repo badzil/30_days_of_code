@@ -69,7 +69,7 @@ func IsPalindrome(input string) bool {
 
 func AssertEqual(left interface{}, right interface{}) {
 	if left != right {
-		fmt.Println("%v != %v", left, right)
+		fmt.Printf("%v != %v", left, right)
 		os.Exit(1)
 	}
 }
