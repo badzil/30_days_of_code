@@ -10,7 +10,7 @@ func GetInput() int {
 	return n
 }
 
-func AssertEqual(a int, b int) {
+func AssertEqual(a, b int) {
 	if a == b {
 		fmt.Print(".")
 	} else {
@@ -18,7 +18,7 @@ func AssertEqual(a int, b int) {
 	}
 }
 
-func DivWithRemainder(dividend int, divisor int) (int, int) {
+func DivWithRemainder(dividend, divisor int) (int, int) {
 	quotient := dividend / divisor
 	remainder := dividend - quotient*divisor
 	return quotient, remainder

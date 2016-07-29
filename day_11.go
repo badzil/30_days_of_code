@@ -40,7 +40,7 @@ func GetGrid() [][]int {
 	return grid
 }
 
-func GetHourglass(grid [][]int, row int, column int) int {
+func GetHourglass(grid [][]int, row, column int) int {
 	return grid[row][column] +
 		grid[row][column+1] +
 		grid[row][column+2] +

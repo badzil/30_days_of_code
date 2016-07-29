@@ -4,7 +4,7 @@ package main
 
 import "fmt"
 
-func PrintMultiplication(N int, i int) {
+func PrintMultiplication(N, i int) {
 	fmt.Printf("%v x %v = %v\n", N, i, N*i)
 }
 

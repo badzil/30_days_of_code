@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type Book struct {
 	title  string
@@ -14,7 +12,7 @@ type MyBook struct {
 	price int
 }
 
-func NewMyBook(title string, author string, price int) MyBook {
+func NewMyBook(title, author string, price int) MyBook {
 	book := Book{title, author}
 	return MyBook{book, price}
 }
