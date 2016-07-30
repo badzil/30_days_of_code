@@ -21,8 +21,8 @@ func SafeAtoi(str string) int {
 }
 
 func GetRow(buffer *bufio.Reader) []int {
-	row_str, _ := buffer.ReadString('\n')
-	cells := strings.Split(row_str, " ")
+	rowStr, _ := buffer.ReadString('\n')
+	cells := strings.Split(rowStr, " ")
 	row := make([]int, len(cells))
 	for index, cell := range cells {
 		row[index] = SafeAtoi(cell)
@@ -34,8 +34,8 @@ func GetGrid() [][]int {
 	/* Note that this function is limited to returning 6 rows. */
 	buffer := bufio.NewReader(os.Stdin)
 	grid := make([][]int, 6)
-	for row_idx := 0; row_idx < 6; row_idx++ {
-		grid[row_idx] = GetRow(buffer)
+	for rowIdx := 0; rowIdx < 6; rowIdx++ {
+		grid[rowIdx] = GetRow(buffer)
 	}
 	return grid
 }

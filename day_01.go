@@ -11,29 +11,29 @@ import (
 
 func GetInput() (int, float64, string) {
 	reader := bufio.NewReader(os.Stdin)
-	first_input, _ := reader.ReadString('\n')
-	second_input, _ := reader.ReadString('\n')
-	third_input, _ := reader.ReadString('\n')
+	firstInput, _ := reader.ReadString('\n')
+	secondInput, _ := reader.ReadString('\n')
+	thirdInput, _ := reader.ReadString('\n')
 
 	// Need to strip spaces otherwise convert methods fail.
-	integer, _ := strconv.Atoi(strings.TrimSpace(first_input))
-	double, _ := strconv.ParseFloat(strings.TrimSpace(second_input), 64)
+	integer, _ := strconv.Atoi(strings.TrimSpace(firstInput))
+	double, _ := strconv.ParseFloat(strings.TrimSpace(secondInput), 64)
 
-	return integer, double, third_input
+	return integer, double, thirdInput
 }
 
 func main() {
-	var first_int, second_int int
-	var first_double, second_double float64
-	var first_string, second_string string
+	var firstInt, secondInt int
+	var firstDouble, secondDouble float64
+	var firstString, secondString string
 
-	first_int = 4
-	first_double = 4.0
-	first_string = "HackerRank "
+	firstInt = 4
+	firstDouble = 4.0
+	firstString = "HackerRank "
 
-	second_int, second_double, second_string = GetInput()
+	secondInt, secondDouble, secondString = GetInput()
 
-	fmt.Println(first_int + second_int)
-	fmt.Printf("%.1f\n", first_double+second_double)
-	fmt.Println(first_string + second_string)
+	fmt.Println(firstInt + secondInt)
+	fmt.Printf("%.1f\n", firstDouble+secondDouble)
+	fmt.Println(firstString + secondString)
 }

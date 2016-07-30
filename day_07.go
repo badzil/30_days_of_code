@@ -31,13 +31,13 @@ func PrintlnNumbers(numbers []int) {
 
 func main() {
 	buffer := bufio.NewReader(os.Stdin)
-	array_size_str, _ := buffer.ReadString('\n')
-	array_size, _ := strconv.Atoi(strings.TrimSpace(array_size_str))
+	arraySizeStr, _ := buffer.ReadString('\n')
+	arraySize, _ := strconv.Atoi(strings.TrimSpace(arraySizeStr))
 
-	numbers := make([]int, array_size)
-	for i := 0; i < array_size; i++ {
-		number_str, _ := buffer.ReadString(' ')
-		number, _ := strconv.Atoi(strings.TrimSpace(number_str))
+	numbers := make([]int, arraySize)
+	for i := 0; i < arraySize; i++ {
+		numberStr, _ := buffer.ReadString(' ')
+		number, _ := strconv.Atoi(strings.TrimSpace(numberStr))
 		numbers[i] = number
 	}
 
