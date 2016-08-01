@@ -21,8 +21,8 @@ func SafeAtoi(str string) int {
 }
 
 func GetProblemSize(buffer *bufio.Reader) int {
-	problem_size_str, _ := buffer.ReadString('\n')
-	return SafeAtoi(problem_size_str)
+	problemSizeStr, _ := buffer.ReadString('\n')
+	return SafeAtoi(problemSizeStr)
 }
 
 func PrintOddAndEvenCharacters(word string) {
@@ -39,8 +39,8 @@ func PrintOddAndEvenCharacters(word string) {
 
 func main() {
 	buffer := bufio.NewReader(os.Stdin)
-	problem_size := GetProblemSize(buffer)
-	for i := 0; i < problem_size; i++ {
+	problemSize := GetProblemSize(buffer)
+	for i := 0; i < problemSize; i++ {
 		newline, _ := buffer.ReadString('\n')
 		word := strings.TrimSpace(newline)
 		PrintOddAndEvenCharacters(word)
