@@ -2,49 +2,23 @@
 
 package main
 
-import "fmt"
+import "./linkedlist"
 
-type Node struct {
-	data      int
-	childNode *Node
-}
-
-func (parentNode *Node) Display() {
-	for parentNode != nil {
-		fmt.Printf("%v ", parentNode.data)
-		parentNode = parentNode.childNode
-	}
-	fmt.Println()
-}
-
-func (parentNode *Node) DeleteDuplicates() {
-	childNode := parentNode.childNode
+func DeleteDuplicates(parentNode *linkedlist.Node) {
+	childNode := parentNode.ChildNode
 	if childNode != nil {
-		if parentNode.data == childNode.data {
-			parentNode.childNode = childNode.childNode
+		if parentNode.Data == childNode.Data {
+			parentNode.ChildNode = childNode.ChildNode
 		}
-		childNode.DeleteDuplicates()
+		DeleteDuplicates(childNode)
 	}
-}
-
-func Insert(head *Node, data int) *Node {
-	if head == nil {
-		head = &Node{data: data}
-	} else {
-		parentNode := head
-		for parentNode.childNode != nil {
-			parentNode = parentNode.childNode
-		}
-		parentNode.childNode = &Node{data: data}
-	}
-	return head
 }
 
 func main() {
-	var head *Node
+	var head *linkedlist.Node
 	for _, number := range []int{1, 2, 2, 3, 3, 4} {
-		head = Insert(head, number)
+		head = linkedlist.Insert(head, number)
 	}
-	head.DeleteDuplicates()
+	DeleteDuplicates(head)
 	head.Display()
 }
